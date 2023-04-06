@@ -10,6 +10,8 @@ Run :
 
 ### `npm start`
 
-Back-End running on port 8000 [http://localhost:8000](http://localhost:8000)
+Back-End running on port 8000 [http://localhost:8000] : (http://localhost:8000)
 
-See the Github repository for UI [UI React - Todo App](https://github.com/chesspamungkas/foodstyles-todo-react).
+## Note : Please Run FoodStyles UI React - Todo App after run this REST API
+
+See the Github repository for UI [UI React - Todo App] : (https://github.com/chesspamungkas/foodstyles-todo-react).
