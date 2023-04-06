@@ -14,14 +14,17 @@ module.exports = function(app) {
     app.post("/api/todos/create", [authJwt.verifyToken], todos.createTodo);
 
     // Update a Todo with id completed
-    app.put("/api/todos/completed/:id", [authJwt.verifyToken], todos.markTodoCompleted);
+    app.patch("/api/todos/completed/:id", [authJwt.verifyToken], todos.markTodoCompleted);
 
     // Update a Todo with id uncompleted
-    app.put("/api/todos/uncompleted/:id", [authJwt.verifyToken], todos.markTodoUncompleted);
+    app.patch("/api/todos/uncompleted/:id", [authJwt.verifyToken], todos.markTodoUncompleted);
 
     // Delete a Todo with id
     app.delete("/api/todos/delete/:id", [authJwt.verifyToken], todos.deleteTodo);
 
     // Retrieve all Todos
     app.get("/api/todos/list", [authJwt.verifyToken], todos.listTodos);
+
+    // Retrieve all Todos
+    app.get("/api/todos/filter/:status", [authJwt.verifyToken], todos.filterByStatus);
 };

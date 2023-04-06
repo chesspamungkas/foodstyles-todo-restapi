@@ -60,3 +60,14 @@ exports.login = (req, res) => {
     res.status(500).send({ message: err.message });
   });
 }
+
+exports.logout = async (req, res) => {
+  try {
+    req.session = null;
+    return res.status(200).send({
+      message: "You've been logout!"
+    });
+  } catch (err) {
+    this.next(err);
+  }
+};
